@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/header';
+import NewAppoitment from './components/new-appoitment';
 import './css/bootstrap.min.css';
 
 
@@ -12,6 +13,11 @@ class App extends Component {
     return (
       <div className="container">
         <Header title="Administrador de Pacientes de Veterinario" />
+        <div className="row">
+          <div className="col-md-10 mx-auto">
+            <NewAppoitment />
+          </div>
+        </div>
       </div>
     );
   }
