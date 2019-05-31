@@ -33,6 +33,10 @@ header h1 {
   justify-content: center;
 }
 
+.card-style {
+  box-shadow: 9px 10px 29px -8px rgba(36,36,36,0.65);
+}
+
 .button-form {
   background-color: #227093 !important;
 }
