@@ -18,9 +18,23 @@ header {
   margin-top: 3rem;
 }
 header h1 {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Roboto', sans-serif;
   color: white;
   font-weight: 600;
+}
+
+.title-form {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-weight: 400;
+}
+.center-form {
+  display: flex;
+  justify-content: center;
+}
+
+.button-form {
+  background-color: #227093 !important;
 }
 .lista-citas .media {
   border-bottom: 1px solid #e1e1e1;
