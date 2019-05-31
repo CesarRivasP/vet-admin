@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header';
 import NewAppoitment from './components/new-appoitment';
+import AppointmentList from './components/appointment-list';
 import './css/bootstrap.min.css';
 
 
@@ -19,6 +20,8 @@ class App extends Component {
     })
   }
 
+  // elimina las citas del state
+
   render(){
     return (
       <div className="container">
@@ -26,6 +29,9 @@ class App extends Component {
         <div className="row">
           <div className="col-md-10 mx-auto">
             <NewAppoitment createNewAppointment={this.createNewAppointment} />
+          </div>
+          <div className="mt-5 col-md-10 mx-auto">
+            <AppointmentList appointments={this.state.appointments} />
           </div>
         </div>
       </div>
