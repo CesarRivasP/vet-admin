@@ -64,7 +64,7 @@ class NewAppoitment extends Component {
     const { error } = this.state;
 
     return (
-      <div className="card mt-5 py-5">
+      <div className="card mt-5 py-3 card-style">
         <div className="card-body">
           <h2 className="card-title text-center mb-5 title-form">
             Llena el formulario para una nueva cita
@@ -151,7 +151,7 @@ class NewAppoitment extends Component {
               </div>
             </div>
 
-            <input type="submit" value="Nueva cita" className="btn mt-3 ml-5 button-form"/>
+            <input type="submit" value="Nueva cita" className="btn mt-3 ml-5 p-2 button-form"/>
           </form>
         </div>
       </div>
