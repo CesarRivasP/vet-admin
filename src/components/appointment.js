@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Appointment = ({ appointment }) => (
+const Appointment = ({ appointment, deleteAppointment }) => (
   <div className="media mt-3">
     <div className="media-body">
       <h3 className="mt-0">{ appointment.pet }</h3>
@@ -17,6 +17,13 @@ const Appointment = ({ appointment }) => (
       <p className="card-text">
         <span>Sintomas: </span>{ appointment.symptom }
       </p>
+
+      <button
+        className="btn btn-danger button-delete"
+        onClick={() => deleteAppointment(appointment.id)}> {/* Asi si espera el click */}
+        {/* onClick={deleteAppointment(appointment.id)}> Asi se ejecuta automaticamente sin el click */}
+        Borrar &times;
+      </button>
     </div>
   </div>
 );
