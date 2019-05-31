@@ -21,6 +21,22 @@ class App extends Component {
   }
 
   // elimina las citas del state
+  deleteAppointment = (id) => {
+    console.log(id);
+    // NUnca se le deben hacer cambios directamente al state
+    // Siempre que se vaya a modificar hay que realizar una copia
+    const currentAppointments = [ ...this.state.appointments ];
+
+    // utilizar para sacar el id del array
+    const appointments = currentAppointments.filter((appointment) => appointment.id !== id); //con el filter, este
+    // guarda en esta constante los elementos que coincidan en la comparacion y deja en el array anterior si ese elemento
+    // Aqui se quiere almacenar las citas que sean diferentes a la que fue seleccionada para ser elininada
+
+    // actualizar el state
+    this.setState({
+      appointments
+    })
+  }
 
   render(){
     return (
@@ -31,7 +47,7 @@ class App extends Component {
             <NewAppoitment createNewAppointment={this.createNewAppointment} />
           </div>
           <div className="mt-5 col-md-10 mx-auto">
-            <AppointmentList appointments={this.state.appointments} />
+            <AppointmentList appointments={this.state.appointments} deleteAppointment={this.deleteAppointment} />
           </div>
         </div>
       </div>
