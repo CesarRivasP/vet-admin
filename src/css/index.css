@@ -40,6 +40,11 @@ header h1 {
 .button-form {
   background-color: #227093 !important;
 }
+
+.button-delete {
+  background-color: #b33939 !important;
+}
+
 .lista-citas .media {
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 3rem;
