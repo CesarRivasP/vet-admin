@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 
+const stateInitial = {
+  appointment: {
+    pet: '',
+    owner: '',
+    date: '',
+    hour: '',
+    symptom: ''
+  },
+  error: false
+};
 
 class NewAppoitment extends Component {
-  state = {
-    appointment: {
-      pet: '',
-      owner: '',
-      date: '',
-      hour: '',
-      symptom: ''
-    },
-    error: false
-  }
+  state = { ...stateInitial }
 
   petRef = React.createRef();
   ownerRef = React.createRef();
@@ -50,6 +51,11 @@ class NewAppoitment extends Component {
 
     // agregar la cita al state de App.js
     this.props.createNewAppointment(newAppoitment);
+
+    // COlocar en el state, el state inicial
+    this.setState({
+      ...stateInitial
+    })
   }
 
   render(){
