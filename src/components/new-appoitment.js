@@ -53,15 +53,26 @@ class NewAppoitment extends Component {
   }
 
   render(){
+
+    // extraer valor de state
+    const { error } = this.state;
+
     return (
       <div className="card mt-5 py-5">
         <div className="card-body">
-          <h2 className="card-title text-center mb-5">
+          <h2 className="card-title text-center mb-5 title-form">
             Llena el formulario para una nueva cita
           </h2>
 
+          {
+            error ?
+              <div className="alert alert-danger mt-2 mb-5 text-center">Todos los campos son obligatorios</div>
+              :
+              null
+          }
+
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group row pl-5">
+            <div className="form-group row center-form center-form">
               <label htmlFor="pet" className="col-sm-4 col-lg-2 col-form-label">Mascota</label>
               <div className="col-sm-8 col-lg-8">
                 <input
@@ -76,7 +87,7 @@ class NewAppoitment extends Component {
                 />
               </div>
             </div>
-            <div className="form-group row pl-5">
+            <div className="form-group row center-form center-form">
               <label htmlFor="owner" className="col-sm-4 col-lg-3 col-form-label">Nombre del dueño</label>
               <div className="col-sm-8 col-lg-7">
                 <input
@@ -91,7 +102,7 @@ class NewAppoitment extends Component {
                 />
               </div>
             </div>
-            <div className="form-group row pl-5">
+            <div className="form-group row center-form center-form">
               <label htmlFor="date" className="col-sm-4 col-lg-2 col-form-label">Fecha</label>
               <div className="col-sm-8 col-lg-3">
                 <input
@@ -117,7 +128,7 @@ class NewAppoitment extends Component {
                 />
               </div>
             </div>
-            <div className="form-group row pl-5">
+            <div className="form-group row center-form center-form">
               <label htmlFor="symptom" className="col-sm-4 col-lg-2 col-form-label">Sintomas</label>
               <div className="col-sm-8 col-lg-8">
                 <textarea
@@ -134,7 +145,7 @@ class NewAppoitment extends Component {
               </div>
             </div>
 
-            <input type="submit" value="Nueva cita" className="py-1 mt-2 btn btn-success ml-5"/>
+            <input type="submit" value="Nueva cita" className="btn mt-3 ml-5 button-form"/>
           </form>
         </div>
       </div>
