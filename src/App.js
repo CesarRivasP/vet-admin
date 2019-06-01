@@ -10,6 +10,24 @@ class App extends Component {
     appointments: []
   }
 
+  // Cuando la aplicacion cargue
+  componentDidMount(){
+    const appointmentsLS = localStorage.getItem('appointments');
+
+    // en caso de que haya algo
+    if(appointmentsLS){
+      this.setState({
+        appointments: JSON.parse(appointmentsLS)  //para que lo convierta en un array de objetos
+      })
+    }
+  }
+
+  // Cuando agregamos o eliminamos una nueva cita
+  componentDidUpdate(){
+                        //nombre de la llave | hay que convertir el array de objetos
+    localStorage.setItem('appointments', JSON.stringify(this.state.appointments))
+  }
+
   createNewAppointment = (data) => {
     console.log(data);
     // copiar el state actual. Siempre se recomienda al hacer modificaciones
