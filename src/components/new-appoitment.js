@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Divider from '@material-ui/core/Divider';
 import uuid from 'uuid';
 
 const stateInitial = {
@@ -14,13 +16,6 @@ const stateInitial = {
 
 class NewAppoitment extends Component {
   state = { ...stateInitial }
-
-  petRef = React.createRef();
-  ownerRef = React.createRef();
-  dateRef = React.createRef();
-  hourRef = React.createRef();
-  symptomRef = React.createRef();
-
 
   handleChange = (e) => {
     this.setState({
@@ -66,9 +61,10 @@ class NewAppoitment extends Component {
     return (
       <div className="card mt-5 py-3 card-style">
         <div className="card-body">
-          <h2 className="card-title text-center mb-5 title-form">
+          <h2 className="card-title text-center mb-3 title-form">
             Llena el formulario para una nueva cita
           </h2>
+          <Divider />
 
           {
             error ?
@@ -78,11 +74,10 @@ class NewAppoitment extends Component {
           }
 
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group row center-form center-form">
+            <div className="form-group row center-form center-form mt-5">
               <label htmlFor="pet" className="col-sm-4 col-lg-2 col-form-label">Mascota</label>
               <div className="col-sm-8 col-lg-8">
                 <input
-                  ref={this.petRef}
                   type="text"
                   className="form-control"
                   placeholder="Mascota"
@@ -97,7 +92,6 @@ class NewAppoitment extends Component {
               <label htmlFor="owner" className="col-sm-4 col-lg-3 col-form-label">Nombre del dueño</label>
               <div className="col-sm-8 col-lg-7">
                 <input
-                  ref={this.ownerRef}
                   type="text"
                   className="form-control"
                   placeholder="Nombre del dueño de la mascota"
@@ -112,7 +106,6 @@ class NewAppoitment extends Component {
               <label htmlFor="date" className="col-sm-4 col-lg-2 col-form-label">Fecha</label>
               <div className="col-sm-8 col-lg-3">
                 <input
-                  ref={this.dateRef}
                   type="date"
                   className="form-control"
                   name="date"
@@ -124,7 +117,6 @@ class NewAppoitment extends Component {
               <label htmlFor="hour" className="col-sm-4 col-lg-2 col-form-label">Hora</label>
               <div className="col-sm-8 col-lg-3">
                 <input
-                  ref={this.hourRef}
                   type="time"
                   className="form-control"
                   name="hour"
@@ -138,7 +130,6 @@ class NewAppoitment extends Component {
               <label htmlFor="symptom" className="col-sm-4 col-lg-2 col-form-label">Sintomas</label>
               <div className="col-sm-8 col-lg-8">
                 <textarea
-                  ref={this.symptomRef}
                   className="form-control"
                   placeholder="Describe los sintomas"
                   name="symptom"
@@ -157,6 +148,10 @@ class NewAppoitment extends Component {
       </div>
     );
   }
+}
+
+NewAppoitment.propTypes = {
+  createNewAppointment: PropTypes.func.isRequired
 }
 
 export default NewAppoitment;
