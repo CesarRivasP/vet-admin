@@ -30,8 +30,8 @@ const Appointment = ({ appointment, deleteAppointment }) => (
   </div>
 );
 
-AppointmentList.propTypes = {
-  appointments: PropTypes.array.isRequired,
+Appointment.propTypes = {
+  appointment: PropTypes.object.isRequired,
   deleteAppointment: PropTypes.func.isRequired
 }
 
