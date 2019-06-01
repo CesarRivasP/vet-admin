@@ -64,7 +64,7 @@ class App extends Component {
           <div className="col-md-10 mx-auto">
             <NewAppoitment createNewAppointment={this.createNewAppointment} />
           </div>
-          <div className="mt-5 col-md-10 mx-auto">
+          <div className="mt-3 col-md-10 mx-auto">
             <AppointmentList appointments={this.state.appointments} deleteAppointment={this.deleteAppointment} />
           </div>
         </div>
