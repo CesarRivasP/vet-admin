@@ -4,7 +4,7 @@ import Divider from '@material-ui/core/Divider';
 
 
 const Header = ({title}) => (
-  <header>
+  <header className="mt-3">
     <h1 className="text-center m-0 mb-2">{ title }</h1>
     <Divider style={{ backgroundColor: 'white' }}/>
   </header>
