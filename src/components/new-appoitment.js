@@ -59,9 +59,9 @@ class NewAppoitment extends Component {
     const { error } = this.state;
 
     return (
-      <div className="card mt-5 py-3 card-style">
-        <div className="card-body">
-          <h2 className="card-title text-center mb-3 title-form">
+      <div className="card mt-4 py-3 card-style">
+        <div className="card-body mb-0">
+          <h2 className="card-title text-center mt-0 mb-3 title-form">
             Llena el formulario para una nueva cita
           </h2>
           <Divider />
