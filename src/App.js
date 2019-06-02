@@ -61,10 +61,10 @@ class App extends Component {
       <div className="container">
         <Header title="Administrador de Pacientes de Veterinario" />
         <div className="row">
-          <div className="col-md-10 mx-auto">
+          <div className="col-md-9 mx-auto">
             <NewAppoitment createNewAppointment={this.createNewAppointment} />
           </div>
-          <div className="mt-3 col-md-10 mx-auto">
+          <div className="mt-3 col-md-9 mx-auto">
             <AppointmentList appointments={this.state.appointments} deleteAppointment={this.deleteAppointment} />
           </div>
         </div>
