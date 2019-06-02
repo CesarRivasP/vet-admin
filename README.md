@@ -1,5 +1,5 @@
 # Administrador de Pacientes de Veterinario V2
-<!-- ![Captura de Recetas](.readme-static/captura.png) -->
+![Captura de Citas](.readme-static/capture.png)
 
 Aplicación desarrollada en ReactJS que se encarga de administrar las citas para consultas de un veterinario. Algunas de las features que tiene son:
 
